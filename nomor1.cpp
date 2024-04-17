@@ -30,14 +30,18 @@ int main() {
     // menghitung nilai akhir
     nilai_akhir = kehadiran*0.05 + quiz*0.10 + tugas*0.15 + uts*0.35 + uas*0.35;
 
+    // header rabel
     cout << "+--------------------------------------------------+-------------------+" << endl;
     cout << left << setw(5) << "| No" << setw(10) << "| Nama" << setw(5) << "| NIM" << setw(10) << "| Kehadiran" << setw(10) << "| Tugas" << setw(10) << "| Quis" << setw(10) << "| UTS" << setw(10) << "| UAS" << "|" << endl;
     cout << "+----------------------------------------------------------------------+" << endl;
 
+    // menampikan data mahasiswa
     for (int b = 1; b <= 2; b++)
     {
-        /* code */
+        cout << left << setw(5) << "| " << b << setw(10) << "| " << nama << setw(10) << "| " << kehadiran << setw(10) << "| " << tugas << setw(10) << "| " << quiz << "| " << uts << "| " << uas << "|" << endl;
     }
+    cout << "+----------------------------------------------------------------------+" << endl;
+    
     
     
 }
