@@ -25,10 +25,16 @@ int main() {
         cout << "Nilai UAS       : ";
         cin >> uas;
     }
+
+    // menghitung nilai akhir
+    nilai_akhir = kehadiran*0.05 + quiz*0.10 + tugas*0.15 + uts*0.35 + uas*0.35;
+
+    cout << left << setw(3) << "No" << setw(10) << "Nama" << setw(10) << "NIM" << setw(10) << "Kehadiran" << setw(10) << "Tugas" << setw(10) << "Quis" << setw << "UTS" << setw(10) << "UAS" << endl;
+
+    for (int b = 1; b <= 6; b++)
+    {
+        /* code */
+    }
     
-
-
-
-
-
+    
 }
