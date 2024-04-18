@@ -22,7 +22,7 @@ int main() {
     for(int i : larik)
         cout << i << " ";
     
-    cout << "\nRata-rata: " << rata_rata << endl;
+    cout << "\n\nRata-rata: " << rata_rata << endl;
 
     return 0;
 }
