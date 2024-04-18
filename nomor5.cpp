@@ -14,7 +14,7 @@ int main() {
         printf("\n");
 
         // untuk menghapus data
-        for(int i=0; i>n-1; i++)
+        for(int i=0; i>n-1; i++) // mengganti i<n-1 menjadi i>n-1
             data[i]=data[i+1];
 
         // jumlah data berkurang
