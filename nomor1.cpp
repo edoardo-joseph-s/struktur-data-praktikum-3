@@ -2,19 +2,19 @@
 #include <iomanip>
 using namespace std;
 
-// deklarasi struct untuk data mahasiswa
+// dekalarasi variebel dengan struct
 struct Data {
     string nama;
-    int nim, kehadiran, tugas, quiz, uts, uas, nilai_akhir;
+    int nim, kehadiran, tugas, quiz, uts, uas;
+    float nilai_akhir;
 };
 
 int main() {
-    // deklarasi array untuk 6 mahasiswa
-    // entah kenapa kalau ga pake ini error
+    // array mahasiswa
     Data mhs[6];
 
     // input data mahasiswa
-    for (int i = 0; i < 2; i++) {
+    for (int i = 0; i < 6; i++) {
         cout << "\nData Siswa Ke-" << i + 1 << endl;
         cout << "Masukan Nama    : ";
         cin >> mhs[i].nama;
@@ -36,15 +36,15 @@ int main() {
     }
 
     // header tabel
-    system ("CLS");
-    cout << "+-------------------------------------------------------------------------------------------+" << endl;
-    cout << left << setw(5) << "| No" << setw(13) << "| Nama" << setw(10) << "| NIM" << setw(10) << "| Kehadiran" << setw(10) << "| Tugas" << setw(10) << "| Quiz" << setw(10) << "| UTS" << setw(10) << "| UAS" << setw(10) << "| Nilai Akhir" << "|" << endl;
-    cout << "+-------------------------------------------------------------------------------------------+" << endl;
+    system("cls");
+    cout << "+------------------------------------------------------------------------------------------------------+" << endl;
+    cout << left << setw(5) << "| No" << setw(13) << "| Nama" << setw(10) << "| NIM" << setw(10) << "| Kehadiran" << setw(10) << "| Tugas" << setw(10) << "| Quiz" << setw(10) << "| UTS" << setw(10) << "| UAS" << setw(12) << "| Nilai Akhir" << "|" << endl;
+    cout << "+------------------------------------------------------------------------------------------------------+" << endl;
 
-    // menampilkan data mahasiswa
-    for (int i = 0; i < 2; i++) {
+    // output tabel
+    for (int i = 0; i < 6; i++) {
         cout << setiosflags(ios::left) << setw(4) << "| " << i + 1;
-        cout << setiosflags(ios::left) << setw(5) << "| " << mhs[i].nama;
+        cout << setiosflags(ios::left) << setw(6) << "| " << mhs[i].nama;
         cout << setiosflags(ios::left) << setw(8) << "| " << mhs[i].nim;
         cout << setiosflags(ios::left) << setw(9) << "| " << mhs[i].kehadiran;
         cout << setiosflags(ios::left) << setw(8) << "| " << mhs[i].tugas;
@@ -53,7 +53,6 @@ int main() {
         cout << setiosflags(ios::left) << setw(8) << "| " << mhs[i].uas;
         cout << setiosflags(ios::left) << setw(11) << "| " << mhs[i].nilai_akhir << "|" << endl;
     }
-    cout << "+-------------------------------------------------------------------------------------------+" << endl;
-
+    cout << "+------------------------------------------------------------------------------------------------------+" << endl;
     return 0;
 }
