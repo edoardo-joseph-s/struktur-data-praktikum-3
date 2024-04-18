@@ -19,6 +19,4 @@ int main() {
     // output hasil dari luas trapesium
     cout << "Luas trapesium adalah: " << var_luas << endl;
     return 0;
-
-
 }
