@@ -1,47 +1,60 @@
 #include <iostream>
 #include <iomanip>
+#include <vector>
 using namespace std;
 
 int main() {
     // deklarasi variable
-    string nama;
-    int nim, kehadiran, tugas, quiz, uts, uas, nilai_akhir;
+    struct Student {
+        string nama;
+        int nim, kehadiran, tugas, quiz, uts, uas;
+        double nilai_akhir;
+    };
+
+    vector<Student> students(6);
 
     // input data mahasiswa
-    for (int i = 1; i <= 1; i++)
+    for (int i = 0; i < 6; i++)
     {
-        cout << "\nData Siswa Ke-" << i;
+        cout << "\nData Siswa Ke-" << i + 1;
         cout << "\nMasukan Nama    : ";
-        cin >> nama;
+        cin >> students[i].nama;
         cout << "Masukan NIM     : ";
-        cin >> nim;
+        cin >> students[i].nim;
         cout << "Nilai Kehadiran : ";
-        cin >> kehadiran;
+        cin >> students[i].kehadiran;
         cout << "Nilai Tugas     : ";
-        cin >> tugas;
+        cin >> students[i].tugas;
         cout << "Nilai Quiz      : ";
-        cin >> quiz;
+        cin >> students[i].quiz;
         cout << "Nilai UTS       : ";
-        cin >> uts;
+        cin >> students[i].uts;
         cout << "Nilai UAS       : ";
-        cin >> uas;
+        cin >> students[i].uas;
+
+        // menghitung nilai akhir
+        students[i].nilai_akhir = students[i].kehadiran*0.05 + students[i].quiz*0.10 + students[i].tugas*0.15 + students[i].uts*0.35 + students[i].uas*0.35;
     }
 
-    // menghitung nilai akhir
-    nilai_akhir = kehadiran*0.05 + quiz*0.10 + tugas*0.15 + uts*0.35 + uas*0.35;
-
-    // header rabel
+    // header tabel
     cout << "+------------------------------------------------------------------------------+" << endl;
-    cout << left << setw(5) << "| No" << setw(13) << "| Nama" << setw(10) << "| NIM" << setw(10) << "| Kehadiran" << setw(10) << "| Tugas" << setw(10) << "| Quis" << setw(10) << "| UTS" << setw(10) << "| UAS" << "|" << endl;
+    cout << left << setw(5) << "| No" << setw(15) << "| Nama" << setw(10) << "| NIM" << setw(10) << "| Kehadiran" << setw(10) << "| Tugas" << setw(10) << "| Quiz" << setw(10) << "| UTS" << setw(10) << "| UAS" << setw(10) << "| Nilai Akhir |" << endl;
     cout << "+------------------------------------------------------------------------------+" << endl;
 
-    // menampikan data mahasiswa
-    for (int b = 1; b <= 1; b++)
+    // menampilkan data mahasiswa
+    for (int i = 0; i < 6; i++)
     {
-    cout << left << setw(4) << "| " << b << setw(10) << "| " << nama << setw(8) << "| " << nim << setw(9) << "| " << kehadiran << setw(8) << "| " << tugas << setw(8) << "| " << quiz << setw(8) << "| " << uts << setw(8) << "| " << uas << "|" << endl;
-    }
+        cout << left << setw(5) << "| " << i + 1
+             << setw(15) << "| " << students[i].nama
+             << setw(10) << "| " << students[i].nim
+             << setw(10) << "| " << students[i].kehadiran
+             << setw(10) << "| " << students[i].tugas
+             << setw(10) << "| " << students[i].quiz
+             << setw(10) << "| " << students[i].uts
+             << setw(10) << "| " << students[i].uas
+             << setw(12) << "| " << fixed << setprecision(2) << students[i].nilai_akhir << "|" << endl;
+    }   
     cout << "+------------------------------------------------------------------------------+" << endl;
     
-    
-    
+    return 0;
 }
