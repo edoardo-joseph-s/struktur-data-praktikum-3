@@ -23,24 +23,18 @@ int main() {
     int jumlah_lagu;
 
     // input lagu
-    for (int i = 0; i < 20; i++)
-    {
         int j_lagu;
         cout << "Catatan: Masukan minimal 10 lagu dan maximal 20 lagu." << endl;
         cout << "Masukan Jumlah Lagu: ";
         cin >> jumlah_lagu;
 
-        // minimal dan maximal input lagu
-        if (jumlah_lagu >=10 && jumlah_lagu <=20)
-        {
-            data.push_back(jumlah_lagu);
-            jumlah_lagu++;
-        } else if (jumlah_lagu <= 10) {
-            cout << "Jumlah lagu yang anda masukan kurang dari 10" << endl;
-        } else if (jumlah_lagu >= 20) {
-            cout << "Jumlah lagu yang anda masukan lebih dari 20" << endl;
-        } else {
-            cout << "Data yang anda masukan salah" << endl;
+         // Validasi jumlah lagu
+        if (jumlah_lagu < 10) {
+            cout << "Jumlah lagu yang Anda masukan kurang dari 10." << endl;
+            return 1; 
+        } else if (jumlah_lagu > 20) {
+            cout << "Jumlah lagu yang Anda masukan lebih dari 20." << endl;
+            return 1; 
         }
 
         // input data lagu
@@ -53,8 +47,11 @@ int main() {
             cout << "Nomor Track    : "; cin >> lg[i].data_lagu.nomor_track;
             cout << "Kode Album     : "; cin >> lg[i].data_lagu.kode_album;
         }
-    }
+    /*for (int i = 0; i < 20; i++)
+    {
+    }*/
 
+    system("cls");
     for (int i = 0; i < jumlah_lagu; i++)
     {
         cout << "Data ke-" << i + 1 << "\n";
