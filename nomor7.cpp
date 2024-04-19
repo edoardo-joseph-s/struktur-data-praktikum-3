@@ -7,7 +7,7 @@ struct lagu
 {
     string judul, penyanyi;
     int tahun_produksi, nomor_track;
-    char kode_album;
+    char kode_album[3];
 };
 
 // struct kode RBT
