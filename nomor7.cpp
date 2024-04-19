@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 // struct lagu
@@ -17,8 +18,10 @@ struct code_rbt
 int main() {
     // vector menetukan min dan max input
     vector<int> data;
+    lagu lg[20];
     int jumlah_lagu = 0;
 
+    // input lagu
     for (int i = 0; i < 20; i++)
     {
         int j_lagu;
@@ -26,6 +29,7 @@ int main() {
         cout << "Masukan Jumlah Lagu: ";
         cin >> j_lagu;
 
+        // minimal dan maximal input lagu
         if (j_lagu >=10 && j_lagu <=20)
         {
             data.push_back(j_lagu);
@@ -37,11 +41,18 @@ int main() {
         } else {
             cout << "Data yang anda masukan salah" << endl;
         }
+
+        // input data lagu
+        for (int i = 0; i < jumlah_lagu; i++)
+        {
+            cout << "\nDate ke-" << i + 1 << ":" << endl;
+            cout << "Judul Lagu     : "; cin >> lg[i].judul;
+            cout << "Penyanyi       : "; cin >> lg[i].penyanyi;
+            cout << "Tahun Produksi : "; cin >> lg[i].tahun_produksi;
+            cout << "Nomor Track    : "; cin >> lg[i].nomor_track;
+            cout << "Kode Album     : "; cin >> lg[i].kode_album;
+        }
         
     }
-    
-    
-    cout << "\t\tData Album Lagu" << endl;
-
 
 }
