@@ -6,7 +6,8 @@ using namespace std;
 struct lagu
 {
     string judul, penyanyi;
-    int tahun_produksi, nomor_track, kode_album;
+    int tahun_produksi, nomor_track;
+    char kode_album;
 };
 
 // struct kode RBT
@@ -46,8 +47,8 @@ int main() {
         for (int i = 0; i < jumlah_lagu; i++)
         {
             cout << "\nDate ke-" << i + 1 << ":\n";
-            cout << "Judul Lagu     : "; cin >> lg[i].data_lagu.judul;
-            cout << "Penyanyi       : "; cin >> lg[i].data_lagu.penyanyi;
+            cout << "Judul Lagu     : "; cin.ignore(); getline(cin, lg[i].data_lagu.judul);
+            cout << "Penyanyi       : "; getline(cin, lg[i].data_lagu.penyanyi);
             cout << "Tahun Produksi : "; cin >> lg[i].data_lagu.tahun_produksi;
             cout << "Nomor Track    : "; cin >> lg[i].data_lagu.nomor_track;
             cout << "Kode Album     : "; cin >> lg[i].data_lagu.kode_album;
