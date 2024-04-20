@@ -20,6 +20,7 @@ int main() {
     // output rata-rata 1-100
     cout << "Angka ganjil 1-100:  ";
     for(int i : larik)
+    
         cout << i << " ";
     
     cout << "\n\nRata-rata: " << rata_rata << endl;
