@@ -5,18 +5,18 @@ int main() {
     int bil1, bil2, bil3, bil4, tambah;
 
     cout << "Penjumlahan\n";
-    cout << "Angka 1: ";
+    cout << "Masukan angka: ";
     cin >> bil1;
-    cout << "Angka 2: ";
+    cout << "Masukan angka: ";
     cin >> bil2;
-    cout << "Angka 3: ";
+    cout << "Masukan angka: ";
     cin >> bil3;
-    cout << "Angka 4: ";
+    cout << "Masukan angka: ";
     cin >> bil4;
 
     tambah = bil1 + bil2 + bil3 + bil4;
 
-    cout << "Hasilnya adlaah: " << tambah << endl;
+    cout << "Hasil: " << tambah << endl;
 
     return 0;
 }
