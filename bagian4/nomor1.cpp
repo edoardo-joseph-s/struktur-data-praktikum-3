@@ -5,7 +5,7 @@ using namespace std;
 struct dt {
     string nama; 
     int nim, kehadiran, tugas, quis, uts, uas;
-    float akhir;
+    float nilai_akhir;
 };
 
 int main() {
@@ -29,7 +29,7 @@ int main() {
         cout << "Nilai UAS      : ";
         cin >> siswa[i].uas;
 
-        siswa[i].akhir = siswa[i].kehadiran * 0.05 + siswa[i].quis * 0.10 + siswa[i].tugas * 0.15 + siswa[i].uts * 0.35 + siswa[i].uas * 0.35;
+        siswa[i].nilai_akhir = siswa[i].kehadiran * 0.05 + siswa[i].quis * 0.10 + siswa[i].tugas * 0.15 + siswa[i].uts * 0.35 + siswa[i].uas * 0.35;
     }
 
     cout << "------------------------------------------------------------------------------------------------" << endl;
@@ -37,7 +37,7 @@ int main() {
     cout << "------------------------------------------------------------------------------------------------" << endl;
 
     for (int i = 0; i < 6; i++) {
-        cout << left <<setw(5) << i + 1 << setw(15) << siswa[i].nama << setw(10) << siswa[i].nim << setw(10) << siswa[i].kehadiran << setw(10) << siswa[i].tugas << setw(10) << siswa[i].quis << setw(10) << siswa[i].uts << setw(10) << siswa[i].uas << setw(10) << siswa[i].akhir << endl;
+        cout << left <<setw(5) << i + 1 << setw(15) << siswa[i].nama << setw(10) << siswa[i].nim << setw(10) << siswa[i].kehadiran << setw(10) << siswa[i].tugas << setw(10) << siswa[i].quis << setw(10) << siswa[i].uts << setw(10) << siswa[i].uas << setw(10) << siswa[i].nilai_akhir << endl;
     }
     cout << "------------------------------------------------------------------------------------------------" << endl;
 
