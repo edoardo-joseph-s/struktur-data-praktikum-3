@@ -2,20 +2,21 @@
 using namespace std;
 
 int main() {
-    int a, b, c, d, output;
+    int bil1, bil2, bil3, bil4, tambah;
 
+    cout << "Penjumlahan\n";
     cout << "Angka 1: ";
-    cin >> a;
+    cin >> bil1;
     cout << "Angka 2: ";
-    cin >> b;
+    cin >> bil2;
     cout << "Angka 3: ";
-    cin >> c;
+    cin >> bil3;
     cout << "Angka 4: ";
-    cin >> d;
+    cin >> bil4;
 
-    output = a + b + c + d;
+    tambah = bil1 + bil2 + bil3 + bil4;
 
-    cout << "Hasil dari penjumlahan di atas adalah: " << output << endl;
+    cout << "Hasilnya adlaah: " << tambah << endl;
 
     return 0;
 }
