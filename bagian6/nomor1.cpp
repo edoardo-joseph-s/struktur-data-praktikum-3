@@ -2,34 +2,32 @@
 #include <iomanip>
 using namespace std;
 
-struct data_mhs {
+struct Data {
     string nama; 
-    int nim, kehadiran, tugas, quis, uts, uas;
-    double nilaiAkhir;
+    int nim, kehadiran, tugas, quis, uts, uas, NA;
 };
 
 int main() {
-    data_mhs mahasiswa[6];
-
+    Data mahasiswa[6];
 
     for (int i = 0; i < 6 ;i++) {
-        cout << "\nNomor. " << i + 1 << endl;
-        cout << "Masukan Nama: ";
+        cout << "\nData Ke- " << i + 1 << endl;
+        cout << "Masukan Nama       : ";
         cin >> mahasiswa[i].nama;
-        cout << "Masukan NIM: ";
+        cout << "Masukan NIM        : ";
         cin >> mahasiswa[i].nim;
-        cout << "Nilai Kehadiran: ";
+        cout << "Nilai Kehadiran    : ";
         cin >> mahasiswa[i].kehadiran;
-        cout << "Nilai Tugas: ";
+        cout << "Nilai Tugas        : ";
         cin >> mahasiswa[i].tugas;
-        cout << "Nilai Quiz: ";
+        cout << "Nilai Quiz         : ";
         cin >> mahasiswa[i].quis;
-        cout << "Nilai UTS: "; 
+        cout << "Nilai UTS          : "; 
         cin >> mahasiswa[i].uts;
-        cout << "Nilai UAS: ";
+        cout << "Nilai UAS          : ";
         cin >> mahasiswa[i].uas;
 
-        mahasiswa[i].nilaiAkhir = mahasiswa[i].kehadiran * 0.05 + mahasiswa[i].quis * 0.10 + mahasiswa[i].tugas * 0.15 + mahasiswa[i].uts * 0.35 + mahasiswa[i].uas * 0.35;
+        mahasiswa[i].NA = mahasiswa[i].kehadiran * 0.05 + mahasiswa[i].quis * 0.10 + mahasiswa[i].tugas * 0.15 + mahasiswa[i].uts * 0.35 + mahasiswa[i].uas * 0.35;
     }
 
     cout << "------------------------------------------------------------------------------------------------" << endl;
@@ -37,7 +35,7 @@ int main() {
     cout << "------------------------------------------------------------------------------------------------" << endl;
 
     for (int i = 0; i < 6; i++) {
-        cout << left <<setw(5) << i + 1 << setw(15) << mahasiswa[i].nama << setw(10) << mahasiswa[i].nim << setw(10) << mahasiswa[i].kehadiran << setw(10) << mahasiswa[i].tugas << setw(10) << mahasiswa[i].quis << setw(10) << mahasiswa[i].uts << setw(10) << mahasiswa[i].uas << setw(10) << mahasiswa[i].nilaiAkhir << endl;
+        cout << left <<setw(5) << i + 1 << setw(15) << mahasiswa[i].nama << setw(10) << mahasiswa[i].nim << setw(10) << mahasiswa[i].kehadiran << setw(10) << mahasiswa[i].tugas << setw(10) << mahasiswa[i].quis << setw(10) << mahasiswa[i].uts << setw(10) << mahasiswa[i].uas << setw(10) << mahasiswa[i].NA << endl;
     }
     cout << "------------------------------------------------------------------------------------------------" << endl;
 

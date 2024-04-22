@@ -5,31 +5,31 @@ using namespace std;
 struct dt {
     string nama; 
     int nim, kehadiran, tugas, quis, uts, uas;
-    double akhir;
+    float akhir;
 };
 
 int main() {
-    dt mahasiswa[6];
+    dt siswa[6];
 
 
     for (int i = 0; i < 6 ;i++) {
         cout << "\nData ke. " << i + 1 << endl;
         cout << "Masukan Nama   : ";
-        cin >> mahasiswa[i].nama;
+        cin >> siswa[i].nama;
         cout << "Masukan NIM    : ";
-        cin >> mahasiswa[i].nim;
+        cin >> siswa[i].nim;
         cout << "Nilai Kehadiran: ";
-        cin >> mahasiswa[i].kehadiran;
+        cin >> siswa[i].kehadiran;
         cout << "Nilai Tugas    : ";
-        cin >> mahasiswa[i].tugas;
+        cin >> siswa[i].tugas;
         cout << "Nilai Quiz     : ";
-        cin >> mahasiswa[i].quis;
+        cin >> siswa[i].quis;
         cout << "Nilai UTS      : "; 
-        cin >> mahasiswa[i].uts;
+        cin >> siswa[i].uts;
         cout << "Nilai UAS      : ";
-        cin >> mahasiswa[i].uas;
+        cin >> siswa[i].uas;
 
-        mahasiswa[i].akhir = mahasiswa[i].kehadiran * 0.05 + mahasiswa[i].quis * 0.10 + mahasiswa[i].tugas * 0.15 + mahasiswa[i].uts * 0.35 + mahasiswa[i].uas * 0.35;
+        siswa[i].akhir = siswa[i].kehadiran * 0.05 + siswa[i].quis * 0.10 + siswa[i].tugas * 0.15 + siswa[i].uts * 0.35 + siswa[i].uas * 0.35;
     }
 
     cout << "------------------------------------------------------------------------------------------------" << endl;
@@ -37,7 +37,7 @@ int main() {
     cout << "------------------------------------------------------------------------------------------------" << endl;
 
     for (int i = 0; i < 6; i++) {
-        cout << left <<setw(5) << i + 1 << setw(15) << mahasiswa[i].nama << setw(10) << mahasiswa[i].nim << setw(10) << mahasiswa[i].kehadiran << setw(10) << mahasiswa[i].tugas << setw(10) << mahasiswa[i].quis << setw(10) << mahasiswa[i].uts << setw(10) << mahasiswa[i].uas << setw(10) << mahasiswa[i].akhir << endl;
+        cout << left <<setw(5) << i + 1 << setw(15) << siswa[i].nama << setw(10) << siswa[i].nim << setw(10) << siswa[i].kehadiran << setw(10) << siswa[i].tugas << setw(10) << siswa[i].quis << setw(10) << siswa[i].uts << setw(10) << siswa[i].uas << setw(10) << siswa[i].akhir << endl;
     }
     cout << "------------------------------------------------------------------------------------------------" << endl;
 
