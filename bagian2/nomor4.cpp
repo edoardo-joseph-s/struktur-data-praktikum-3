@@ -18,9 +18,9 @@ int main() {
     cout << "Angka ganjil 1-100:  ";
     for(int i : larik)
     
-        cout << i << " ";
+        cout << i << " \n";
     
-    cout << "\n\nRata-rata: " << rata_rata << endl;
+    cout << "\n\nRata-rata adalah: " << rata_rata << endl;
 
     return 0;
 }
