@@ -20,7 +20,7 @@ int main() {
     
         cout << i << " \n";
     
-    cout << "\n\nRata-rata adalah: " << rata_rata << endl;
+    cout << "\nRata-rata adalah: " << rata_rata << endl;
 
     return 0;
 }
