@@ -5,22 +5,19 @@ using namespace std;
 struct msk
 {
     string judul, penyanyi;
-    int tahun, nt, data_lagu;
+    int tahun, nt;
     char code_album[3];
 };
 
 struct rbt_code
 {
-    msk rbt;
+    msk data_lagu, rbt;
 };
 
 int main() {
-    vector<int> data;
     rbt_code lagu[20];
     int jumlahLagu;
 
-        int j_lagu;
-        cout << "Catatan: Masukan minimal 10 msk dan maximal 20 msk." << endl;
         cout << "Masukan Jumlah Lagu: ";
         cin >> jumlahLagu;
 

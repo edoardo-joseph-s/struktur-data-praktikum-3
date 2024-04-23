@@ -4,48 +4,48 @@ using namespace std;
 
 struct msk
 {
-    string jdl, penyanyi;
-    int rilis, track;
-    char c_album[3];
+    string judl, penyanyi;
+    int tahun_rilis, c_track;
+    char album[3];
 };
 
 struct rbt_code
 {
-    msk albu_date, rbt;
+    msk data_album, rbt;
 };
 
 int main() {
-    rbt_code lagu[20];
-    int jmlh;
+    rbt_code data_lagu[20];
+    int jumlah_musik;
 
         cout << "Masukan Jumlah Lagu: ";
-        cin >> jmlh;
+        cin >> jumlah_musik;
 
-        if (jmlh < 10) {
+        if (jumlah_musik < 10) {
             cout << "Jumlah msk yang Anda masukan kurang dari 10." << endl;
             return 1; 
-        } else if (jmlh > 20) {
+        } else if (jumlah_musik > 20) {
             cout << "Jumlah msk yang Anda masukan lebih dari 20." << endl;
             return 1; 
         }
 
-        for (int i = 0; i < jmlh; i++)
+        for (int i = 0; i < jumlah_musik; i++)
         {
             cout << "\nDate ke-" << i + 1 << ":\n";
-            cout << "Judul Lagu     : "; cin.ignore(); getline(cin, lagu[i].albu_date.jdl);
-            cout << "Penyanyi       : "; getline(cin, lagu[i].albu_date.penyanyi);
-            cout << "Tahun Produksi : "; cin >> lagu[i].albu_date.rilis;
-            cout << "Nomor Track    : "; cin >> lagu[i].albu_date.track;
-            cout << "Kode Album     : "; cin >> lagu[i].albu_date.c_album;
+            cout << "Judul Lagu     : "; cin.ignore(); getline(cin, data_lagu[i].data_album.judl);
+            cout << "Penyanyi       : "; getline(cin, data_lagu[i].data_album.penyanyi);
+            cout << "Tahun Produksi : "; cin >> data_lagu[i].data_album.tahun_rilis;
+            cout << "Nomor Track    : "; cin >> data_lagu[i].data_album.c_track;
+            cout << "Kode Album     : "; cin >> data_lagu[i].data_album.album;
         }
     
-    for (int i = 0; i < jmlh; i++)
+    for (int i = 0; i < jumlah_musik; i++)
     {
         cout << "Data ke-" << i + 1 << "\n";
         cout << "--------------------------------" << endl;
-        cout << "\tPenyanyi     : " << lagu[i].albu_date.penyanyi << endl;
-        cout << "\tJudul Lagu   : " << lagu[i].albu_date.jdl << endl;
-        cout << "\tKode RBT     : " << lagu[i].rbt.track << "-" << lagu[i].albu_date.c_album << endl;
-        cout << "\tTahun        : " << lagu[i].albu_date.rilis << endl;
+        cout << "\tPenyanyi     : " << data_lagu[i].data_album.penyanyi << endl;
+        cout << "\tJudul Lagu   : " << data_lagu[i].data_album.judl << endl;
+        cout << "\tKode RBT     : " << data_lagu[i].rbt.c_track << "-" << data_lagu[i].data_album.album << endl;
+        cout << "\tTahun        : " << data_lagu[i].data_album.tahun_rilis << endl;
     }
 }

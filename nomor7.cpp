@@ -17,13 +17,11 @@ struct musik
 };
 
 int main() {
-    // vector menetukan min dan max input
-    vector<int> data;
     musik lg[20];
     int jumlah_lagu;
 
     // input lagu
-        int j_lagu;
+        // int j_lagu;
         cout << "Catatan: Masukan minimal 10 lagu dan maximal 20 lagu." << endl;
         cout << "Masukan Jumlah Lagu: ";
         cin >> jumlah_lagu;

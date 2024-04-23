@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 
 struct lagu
@@ -15,12 +14,9 @@ struct codeRBT
 };
 
 int main() {
-    vector<int> data;
     codeRBT lg[20];
     int Jlagu;
 
-        int j_lagu;
-        cout << "Catatan: Masukan minimal 10 lagu dan maximal 20 lagu." << endl;
         cout << "Masukan Jumlah Lagu: ";
         cin >> Jlagu;
 
