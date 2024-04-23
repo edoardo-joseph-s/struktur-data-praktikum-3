@@ -18,7 +18,6 @@ int main() {
     rbt_code lagu[20];
     int jmlh;
 
-        cout << "Catatan: Masukan minimal 10 msk dan maximal 20 msk." << endl;
         cout << "Masukan Jumlah Lagu: ";
         cin >> jmlh;
 
