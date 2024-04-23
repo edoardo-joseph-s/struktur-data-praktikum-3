@@ -11,13 +11,13 @@ int main() {
         a += i;
     }
 
-    double rata2 = static_cast<double>(a) / lr.size();
+    double bil_rata = static_cast<double>(a) / lr.size();
 
     cout << "Kumpulan angka ganjil: ";
     for (int i : lr)
         cout << i << " ";
 
-    cout << "\nRata-rata: " << rata2 << endl;
+    cout << "\nRata-rata: " << bil_rata << endl;
 
     return 0;
 }
