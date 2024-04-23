@@ -11,13 +11,13 @@ int main() {
         a += i;
     }
 
-    double rata2 = static_cast<double>(a) / larik.size();
+    double rata_rata_bilgjl = static_cast<double>(a) / larik.size();
 
     cout << "Deret bilangan ganjil: ";
     for (int i : larik)
         cout << i << " ";
 
-    cout << "\nRata-rata: " << rata2 << endl;
+    cout << "\nRata-rata: " << rata_rata_bilgjl << endl;
 
     return 0;
 }
